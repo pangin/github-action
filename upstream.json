@@ -1,0 +1,110 @@
+{
+  "$comment": "Machine-readable upstream metadata. Human guide: UPSTREAM.md. Updated by .github/workflows/upstream-sync.yml (sha.fetched/integrated) — never edit sha.pinned.",
+  "repository": "pangin/github-action",
+  "upstream": {
+    "url": "https://github.com/event-catalog/github-action.git",
+    "web": "https://github.com/event-catalog/github-action",
+    "defaultBranch": "main",
+    "relation": "github-fork (public, inside the fork network)"
+  },
+  "branches": {
+    "main": "main",
+    "vendor": "vendor/upstream-main",
+    "syncBranchPrefix": "sync/upstream-"
+  },
+  "sha": {
+    "pinned": "d721c06b0142c55cd23c461734c1423bf95cedb2",
+    "pinnedAt": "2025-06-04T12:49:20+01:00",
+    "pinnedTag": "v0.0.1",
+    "fetched": "d721c06b0142c55cd23c461734c1423bf95cedb2",
+    "fetchedAt": "2026-09-02T05:59:15Z",
+    "integrated": "d721c06b0142c55cd23c461734c1423bf95cedb2",
+    "integratedAt": "2026-09-02T05:59:15Z"
+  },
+  "owner": {
+    "github": "pangin",
+    "name": "성욱 (pangin)"
+  },
+  "sync": {
+    "cadence": "매주 월요일 00:00 UTC (09:00 KST) 예약 실행 + workflow_dispatch 수동 실행",
+    "workflow": ".github/workflows/upstream-sync.yml",
+    "identity": "deploy key \"upstream-sync\" (secret UPSTREAM_SYNC_SSH_KEY); fallback GITHUB_TOKEN with warning",
+    "mergeStrategy": "merge commit only (squash/rebase disabled at repository level)",
+    "botPushesMain": false
+  },
+  "role": {
+    "classification": "optional",
+    "reason": "PR에서 스키마 변경을 LLM으로 리뷰하는 GitHub Action. core 빌드·기동과 무관, 실행에 Scale license key와 LLM key 필요."
+  },
+  "licenseBoundary": {
+    "root": "BSL-1.1 (EventCatalog Ltd; Change Date 2029-06-01 → Apache-2.0)",
+    "commercialPaths": [
+      "저장소 전체"
+    ],
+    "productionRestriction": "Change Date 이전 production 사용 금지(평가·테스트·개발만), 실행 시 license_key 입력 필수",
+    "licenseKeyEnvVars": [
+      "license_key (action input)",
+      "EVENTCATALOG_SCALE_LICENSE_KEY"
+    ],
+    "ossOnlyPolicy": "빌드·테스트만.",
+    "licenseFiles": [
+      "LICENSE",
+      "dist/licenses.txt (ncc-generated third-party bundle notice; lists only node-fetch/MIT)"
+    ],
+    "noticeFiles": []
+  },
+  "build": {
+    "node": "20.x",
+    "packageManager": "pnpm",
+    "lockfiles": [
+      "pnpm-lock.yaml"
+    ],
+    "install": "pnpm install --frozen-lockfile",
+    "build": "pnpm run build",
+    "test": "pnpm vitest run",
+    "run": "n/a (소비 저장소 workflow에서 uses: pangin/github-action@main)",
+    "smoke": "INPUT 없이 node dist/index.js 실행 시 'github_token' 필수 오류로 비정상 종료(번들 로드 증명)",
+    "verifyWorkflow": ".github/workflows/fork-verify.yml"
+  },
+  "upstreamWorkflows": [
+    {
+      "file": ".github/workflows/lint.yml",
+      "triggers": "pull_request to branches master, main",
+      "guardedToUpstreamRepo": false
+    },
+    {
+      "file": ".github/workflows/verify-build.yml",
+      "triggers": "pull_request to branches master, main",
+      "guardedToUpstreamRepo": false
+    },
+    {
+      "file": ".github/workflows/release.yml",
+      "triggers": "push to branches master, next, main",
+      "guardedToUpstreamRepo": true
+    }
+  ],
+  "protection": {
+    "main": [
+      "pull-request-only",
+      "required review 1 (admin bypass for PR merge)",
+      "required checks: Fork Verify jobs",
+      "merge commit only",
+      "no force-push",
+      "no deletion"
+    ],
+    "vendor/upstream-main": [
+      "updates only by sync identity (deploy key)",
+      "no force-push",
+      "no deletion"
+    ],
+    "appliedAt": null,
+    "note": "GitHub rulesets on public repos (Free plan). appliedAt is filled when rulesets are active."
+  },
+  "linear": [
+    "GONG-871",
+    "GONG-872",
+    "GONG-876",
+    "GONG-875"
+  ],
+  "generatedAt": "2026-09-02T05:59:15Z"
+}
