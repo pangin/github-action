@@ -17,9 +17,9 @@
     "pinnedAt": "2025-06-04T12:49:20+01:00",
     "pinnedTag": "v0.0.1",
     "fetched": "d721c06b0142c55cd23c461734c1423bf95cedb2",
-    "fetchedAt": "2026-09-02T06:07:17Z",
+    "fetchedAt": "2026-09-02T06:12:59Z",
     "integrated": "d721c06b0142c55cd23c461734c1423bf95cedb2",
-    "integratedAt": "2026-09-02T06:07:17Z"
+    "integratedAt": "2026-09-02T06:12:59Z"
   },
   "owner": {
     "github": "pangin",
@@ -40,15 +40,9 @@
     "root": "BSL-1.1 (EventCatalog Ltd; Change Date 2029-06-01 → Apache-2.0)",
     "commercialPaths": ["저장소 전체"],
     "productionRestriction": "Change Date 이전 production 사용 금지(평가·테스트·개발만), 실행 시 license_key 입력 필수",
-    "licenseKeyEnvVars": [
-      "license_key (action input)",
-      "EVENTCATALOG_SCALE_LICENSE_KEY"
-    ],
+    "licenseKeyEnvVars": ["license_key (action input)", "EVENTCATALOG_SCALE_LICENSE_KEY"],
     "ossOnlyPolicy": "빌드·테스트만.",
-    "licenseFiles": [
-      "LICENSE",
-      "dist/licenses.txt (ncc-generated third-party bundle notice; lists only node-fetch/MIT)"
-    ],
+    "licenseFiles": ["LICENSE", "dist/licenses.txt (ncc-generated third-party bundle notice; lists only node-fetch/MIT)"],
     "noticeFiles": []
   },
   "build": {
@@ -88,14 +82,10 @@
       "no force-push",
       "no deletion"
     ],
-    "vendor/upstream-main": [
-      "updates only by sync identity (deploy key)",
-      "no force-push",
-      "no deletion"
-    ],
+    "vendor/upstream-main": ["updates only by sync identity (deploy key)", "no force-push", "no deletion"],
     "appliedAt": null,
     "note": "GitHub rulesets on public repos (Free plan). appliedAt is filled when rulesets are active."
   },
   "linear": ["GONG-871", "GONG-872", "GONG-876", "GONG-875"],
-  "generatedAt": "2026-09-02T06:07:17Z"
+  "generatedAt": "2026-09-02T06:12:59Z"
 }
