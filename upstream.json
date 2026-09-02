@@ -17,9 +17,9 @@
     "pinnedAt": "2025-06-04T12:49:20+01:00",
     "pinnedTag": "v0.0.1",
     "fetched": "d721c06b0142c55cd23c461734c1423bf95cedb2",
-    "fetchedAt": "2026-09-02T05:59:15Z",
+    "fetchedAt": "2026-09-02T06:07:17Z",
     "integrated": "d721c06b0142c55cd23c461734c1423bf95cedb2",
-    "integratedAt": "2026-09-02T05:59:15Z"
+    "integratedAt": "2026-09-02T06:07:17Z"
   },
   "owner": {
     "github": "pangin",
@@ -38,9 +38,7 @@
   },
   "licenseBoundary": {
     "root": "BSL-1.1 (EventCatalog Ltd; Change Date 2029-06-01 → Apache-2.0)",
-    "commercialPaths": [
-      "저장소 전체"
-    ],
+    "commercialPaths": ["저장소 전체"],
     "productionRestriction": "Change Date 이전 production 사용 금지(평가·테스트·개발만), 실행 시 license_key 입력 필수",
     "licenseKeyEnvVars": [
       "license_key (action input)",
@@ -56,9 +54,7 @@
   "build": {
     "node": "20.x",
     "packageManager": "pnpm",
-    "lockfiles": [
-      "pnpm-lock.yaml"
-    ],
+    "lockfiles": ["pnpm-lock.yaml"],
     "install": "pnpm install --frozen-lockfile",
     "build": "pnpm run build",
     "test": "pnpm vitest run",
@@ -100,11 +96,6 @@
     "appliedAt": null,
     "note": "GitHub rulesets on public repos (Free plan). appliedAt is filled when rulesets are active."
   },
-  "linear": [
-    "GONG-871",
-    "GONG-872",
-    "GONG-876",
-    "GONG-875"
-  ],
-  "generatedAt": "2026-09-02T05:59:15Z"
+  "linear": ["GONG-871", "GONG-872", "GONG-876", "GONG-875"],
+  "generatedAt": "2026-09-02T06:07:17Z"
 }
